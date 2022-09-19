@@ -11,16 +11,18 @@ Input: "2": Result: Sorted array on value "b"
 
 **Explanation:** 
 
-    >>Created a class named ‘arrPair’ which will have variable declarations of ‘a’ and ‘b’ both of ‘int’ data type, 
-    the class will also have a blank constructor and a parameterized constructor with both the parameters, it will 
-    also contain a display method. 
+    >>Created a class named ‘arrPair’ which will have variable declarations of ‘a’ and ‘b’ both 
+    of ‘int’ data type, the class will also have a blank constructor and a parameterized 
+    constructor with both the parameters, it will also contain a display method. 
 
-    >>Created 2 comparator classes, one for comparing and sorting on basis of ‘a’ and other constructor to sort on 
-    basis ‘b’, in ArrayList of [a,b] by making the class implement Comparator and override compare method. 
+    >>Created 2 comparator classes, one for comparing and sorting on basis of ‘a’ and other 
+    constructor to sort on basis ‘b’, in ArrayList of [a,b] by making the class implement 
+    Comparator and override compare method. 
 
-    >>In ‘main’ method, we are providing input as an array of type arrPair, then converted it to an arrayList using 
-    asList(). Then using Collections.sort(), sorted the arrayList on basis of a and b respectively. After sorting converted the 
-    ArrayList into an array using toArray() and displayed it by display() in arrpai class.
+    >>In ‘main’ method, we are providing input as an array of type arrPair, then converted it 
+    to an arrayList using asList(). Then using Collections.sort(), sorted the arrayList on 
+    basis of a and b respectively. After sorting converted the ArrayList into an array using 
+    toArray() and displayed it by display() in arrpai class.
     
 ---------------------------------------------------------------------------------------------------------- 
 
