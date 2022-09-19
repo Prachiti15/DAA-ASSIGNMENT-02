@@ -22,7 +22,7 @@ Input: "2": Result: Sorted array on value "b"
     >>In ‘main’ method, we are providing input as an array of type arrPair, then converted it 
     to an arrayList using asList(). Then using Collections.sort(), sorted the arrayList on 
     basis of a and b respectively. After sorting converted the ArrayList into an array using 
-    toArray() and displayed it by display() in arrpai class.
+    toArray() and displayed it by display() in arrPair class.
     
 ---------------------------------------------------------------------------------------------------------- 
 
