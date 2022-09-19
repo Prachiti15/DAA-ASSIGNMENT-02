@@ -11,14 +11,16 @@ Input: "2": Result: Sorted array on value "b"
 
 **Explanation:** 
 
-    >>Created a class named ‘arrPair’ which will have variable declarations of ‘a’ and ‘b’ both of ‘int’ data type, the class will also have a blank constructor and a 
-    parameterized constructor with both the parameters, it will also contain a display method. 
+    >>Created a class named ‘arrPair’ which will have variable declarations of ‘a’ and ‘b’ both of ‘int’ data type, 
+    the class will also have a blank constructor and a parameterized constructor with both the parameters, it will 
+    also contain a display method. 
 
-    >>Created 2 comparator classes, one for comparing and sorting on basis of ‘a’ and other constructor to sort on basis ‘b’, in ArrayList of [a,b] by making the class 
-    implement Comparator and override compare method. 
+    >>Created 2 comparator classes, one for comparing and sorting on basis of ‘a’ and other constructor to sort on 
+    basis ‘b’, in ArrayList of [a,b] by making the class implement Comparator and override compare method. 
 
-    >>In ‘main’ method, created an ArrayList ‘arrL’ of type ‘arrPair’ and add the pairs in the arrayList. Then using Collections.sort(), sorted the arrayList on basis 
-    of a and b. 
+    >>In ‘main’ method, we are providing input as an array of type arrPair, then converted it to an arrayList using 
+    asList(). Then using Collections.sort(), sorted the arrayList on basis of a and b respectively. After sorting converted the 
+    ArrayList into an array using toArray() and displayed it by display() in arrpai class.
     
 ---------------------------------------------------------------------------------------------------------- 
 
@@ -88,31 +90,37 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        ArrayList<arrPair> arrL = new ArrayList<arrPair>(10);
-        arrL.add(new arrPair(1, 2));
-        arrL.add(new arrPair(3, 4));
-        arrL.add(new arrPair(81, 50));
-        arrL.add(new arrPair(78, 35));
-        arrL.add(new arrPair(11, 26));
-        arrL.add(new arrPair(3, 5));
-        arrL.add(new arrPair(17, 55));
-        arrL.add(new arrPair(91, 27));
-        arrL.add(new arrPair(15, 27));
-        arrL.add(new arrPair(87, 25));
+        arrPair arrL[] = new arrPair[10];
+        arrL[0] = (new arrPair(1, 2));
+        arrL[1] = (new arrPair(3, 4));
+        arrL[2] = (new arrPair(81, 50));
+        arrL[3] = (new arrPair(78, 35));
+        arrL[4] = (new arrPair(11, 26));
+        arrL[5] = (new arrPair(3, 5));
+        arrL[6] = (new arrPair(17, 55));
+        arrL[7] = (new arrPair(91, 27));
+        arrL[8] = (new arrPair(15, 27));
+        arrL[9] = (new arrPair(87, 25));
+
+        List<arrPair> arrlist = new ArrayList<arrPair>(10);
+        arrlist = Arrays.asList(arrL);
         System.out.println("SORTED ON 1st value ");
-        Collections.sort(arrL, new aComparator());
+        Collections.sort(arrlist, new aComparator());
+        arrL = arrlist.toArray(new arrPair[arrlist.size()]);
         for (arrPair i : arrL) {
             i.display();
         }
 
         System.out.println("\nSORTED ON 2nd value ");
-        Collections.sort(arrL, new bComparator());
+        Collections.sort(arrlist, new bComparator());
+        arrL = arrlist.toArray(new arrPair[arrlist.size()]);
         for (arrPair i : arrL) {
             i.display();
         }
     }
 
 }
+
 ```
 ---------------------------------------------------------------------------------------------------------- 
 
